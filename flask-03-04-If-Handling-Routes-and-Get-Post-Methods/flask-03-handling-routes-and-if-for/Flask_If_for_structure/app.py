@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Import Flask modules
 from flask import Flask, render_template
 # Create an object named app 
@@ -26,3 +27,33 @@ if __name__== "__main__":
 
 
 
+=======
+# Import Flask modules
+from flask import Flask, render_template
+# Create an object named app 
+app = Flask(__name__)
+
+# Create a function named head which shows the massage as "This is my first conditions experience" in `index.html` 
+# and assign to the route of ('/')
+@app.route("/")
+def head():
+    first="This is my first conditions experience"
+    return render_template("index.html", message=first)
+
+
+# Create a function named header which prints numbers elements of list one by one in `index.html` 
+# and assign to the route of ('/')
+@app.route("/list")
+def header():
+    # names =["Casper", "Sam", "Jasper"]
+    numbers = range (1,11)
+    return render_template("body.html", object = numbers)
+
+
+# run this app in debug mode on your local.
+if __name__== "__main__":
+    app.run(debug=True)
+
+
+
+>>>>>>> 1e1cd4d0b228e95d5a664117c3d607d0c01ac87c
