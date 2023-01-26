@@ -26,7 +26,7 @@ def main_post():
         return render_template('index.html', developer_name='Türker', not_valid=False)
 
 if __name__ == '__main__':
-     #app.run(debug=True)
-     app.run(host='0.0.0.0', port=80)
+     app.run(debug=True)
+     #app.run(host='0.0.0.0', port=80)
 # isdecimal():the function is used to check if all the letters in the string are numbers or not 
 # The string should only consist of numbers
